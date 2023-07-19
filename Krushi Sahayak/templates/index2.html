@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">          
+
+<body>
+    <h3>KrushiSahayak</h3>
+    <div class="container">
+   
+
+        <div class="box-container">
+        
+            <h2> <u><br>Your  Question :</u>  &nbsp &nbsp&nbsp {{qe}}  </h2>
+            
+           <hr>
+            <h2> <u>Answer:</u><br> </h2>
+           
+            <h2>{{ answ }}<br></h2>
+            <br>
+        </div>
+        <button id="btnSpeak" type="submit" class="icon" value="{{ answ }}"><h2><b> Speak </b></h2></button>
+      
+    </div>  
+ 
+
+    <script>
+        var selectvalue = document.getElementById("btnSpeak"), test= {{ answ | tojson }};
+
+
+        var txtInput = selectvalue;
+        console.log(txtInput);
+        var btnSpeak = document.querySelector('#btnSpeak');
+        var synth = window.speechSynthesis;
+        var voices = [];
+        var myvoice;
+
+        PopulateVoices();
+        if(speechSynthesis !== undefined){
+            speechSynthesis.onvoiceschanged = PopulateVoices;
+        }
+
+        btnSpeak.addEventListener('click', ()=> {
+            var toSpeak = new SpeechSynthesisUtterance(txtInput.value);
+                    toSpeak.voice = myvoice;
+            
+            synth.speak(toSpeak);
+        });
+
+        function PopulateVoices(){
+            voices = synth.getVoices();
+            voices.forEach((voice)=>{
+                if(voice.lang === "hi-IN"){
+                    myvoice = voice;
+                }
+            });
+        
+        }
+    </script>
+
+  
+
+    
+</body>
+
+</html>

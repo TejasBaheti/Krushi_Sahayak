@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+    
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(backg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* background: #1DE66D; */
+}
+
+.container {
+    /* position: absolute;
+    width: 100%;
+    height: 86px;
+    left: 8px;
+    top: 10px;
+
+    background: #F1ECEC; */
+    /* background-image: url(logokrushi.png);
+    background-repeat: no-repeat;*/
+    background-size: 99px 82px; 
+    
+    
+}
+
+h1 {
+    position: absolute;
+    width: 142px;
+    height: 46px;
+    left: 600px;
+    top: 0px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #76B439;
+}
+
+img {
+    position: absolute;
+    width: 99px;
+    height: 82px;
+    left: 2px;
+    top: 2px;
+}
+
+.one {
+
+   /* display: flex; */
+    margin: auto;
+    /* align-self: center; */
+    /* margin-left: 500px; */
+    /* position: absolute; */
+    width: 528px;
+    height: 305px; 
+    left: 60px;
+    top: 60px;
+    margin-top:150px; 
+    border-radius: 30px,30px,30px,30px;
+    background-image:linear-gradient(90deg,rgba(151, 255, 151,0.5),rgba(219, 253, 219,0.5),rgba(151, 255, 213,0.5));
+    padding: -64px 0px;
+    /* background-image: url(VOICE.png); */
+    background-repeat: no-repeat;
+    background-size: 562px 300px;
+    
+  
+
+
+}
+
+
+
+button {
+    margin-top: 15px;
+    margin-left: 12px;
+    padding: 5px 26px 5px 26px;
+    border: 0;
+    outline: 0;
+    background: rgb(19, 164, 70);
+    color: white;
+    border-radius: 8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+button:hover {background-color: rgb(176, 67, 67)}
+
+button:active {
+  background-color:rgb(231, 51, 51);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+h2 {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: rgb(0, 3, 3);
+    font-family: 'Montserrat';
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 2px 3px 5px gray;
+    letter-spacing: 2px;
+}
+
+
+
+
+#submit {
+    display: flex;
+    margin: auto;
+    
+}
+
+.box-container {
+    left: 700px;
+    align-self: center;
+    height: 100%;
+    /* width: 100%; */
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin: 0 auto;
+    margin-top: 10px;
+    transform: translateX(13%);
+}
+
+.icon {
+    background-image: url(weather.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 10px; */
+    height: 55px;
+    /* padding: 18px 18px; */
+    border-radius: 50%;
+    /* background-size: cover; */
+    font-size: 100px;
+    
+ }
+
+ h3{
+    color: rgb(44, 169, 32);
+    font-family: Brandon Text,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    /* text-shadow: 2px 3px 5px gray; */
+    letter-spacing: 5px;
+    margin-top: 9px;
+ }
+
+ .style{
+    width: 800px;
+    padding-left: 60px;
+    padding-top: 20px;
+}
+
+.style1{
+    padding-left: 210px;
+    padding-top: 20px;
+}
+
+.but{
+    padding-left: 36px;
+}
+
+.two{
+    padding-left: 230px;
+}
+h6{
+    text-align: center;
+    padding-top: -20px;
+
+}
+

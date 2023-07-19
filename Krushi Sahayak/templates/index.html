@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=5, initial-scale=1.0">
+    <title>Krushi sahayak</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+
+    
+    
+</head>
+                
+
+<body>
+    <h3>KrushiSahayak</h3>
+    <div class="container">
+        
+        <hr width="100%;" color="white"
+        size="3">
+    </div>
+   
+
+
+    
+        <div class="one">
+            <div><h2>Voice Box</h2></div><br>
+            <div class="style">
+            <form action="/submit" method="post">
+                <input id="speechtotext" style="width: 380px;height: 50px;" name=speechtotext cols="50" rows="5" placeholder=" Detected text"></input>
+                <input type="submit" value="Submit">
+            </form>
+            </div>
+            <div class="but">
+            <button onclick="voice()">Click to speak in English </button>
+            <button onclick="marathi()"> Click to speak in Marathi/Hindi</button>
+            </div>
+            <div class="two">
+            
+             </div>
+             
+        
+
+        
+
+        
+        </div>
+
+    <!-- <div class="three">
+        <label for="output">Answer</label>
+        <br>
+         <textarea id="freeform" name="freeform" rows="4" cols="50">
+           Output here......
+        </textarea>
+        <br> 
+    </div> -->
+
+
+
+    <script>
+        function voice() {
+            var rec_eng = new webkitSpeechRecognition();
+            rec_eng.lang = "en-GB";
+            rec_eng.onresult = function (event) {
+                console.log(event);
+                document.getElementById("speechtotext").value =
+                    event.results[0][0].transcript;
+            }
+            rec_eng.start();
+
+        }
+
+        function marathi() {
+            var rec_mar = new webkitSpeechRecognition();
+            rec_mar.lang = "mr-IN";
+            rec_mar.onresult = function (event) {
+                console.log(event);
+                document.getElementById("speechtotext").value =
+                    event.results[0][0].transcript;
+            }
+            rec_mar.start();
+
+        }
+
+        $(document).ready(function () {
+            
+            //This function called when the button is clicked
+            $("#submit").click(function () {
+                
+                // val() method is used to get the values from 
+               // textarea and stored in txt variable
+                var txt = $("#textbox").val();
+                alert(txt);
+            });
+        });
+    </script>
+</body>
+
+</html>
